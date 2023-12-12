@@ -6,7 +6,7 @@ import CortanaImg from "./img/cortana.png";
 import NavBar from "./components/NavBar/NavBar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import ItemCount from "./components/ItemCount/ItemCount";
-import SearchBar from "./components/SearchBar";
+import SearchBar from "./components/SearchBar/SearchBar";
 import searchImages from "./components/api";
 import ImageList from "./components/ImageList";
 import { useState } from "react";
