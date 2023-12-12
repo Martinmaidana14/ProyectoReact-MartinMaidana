@@ -1,15 +1,26 @@
-import { FaCartArrowDown } from "react-icons/fa6";
-
+import { useState } from "react";
 
 function ProfileCard(props){
 
     const { titulo , arroba , img } = props;
 
+    const [count , setCount ] = useState(0)
+
+    function handleClickSuma(){
+        setCount(count+1);
+    }
+
+    function handleClickResta(){
+        if( count > 0){
+            setCount(count-1);
+        }
+    }
+
+
     return (
 
         <div className="card">
             <div className="card-img">
-                <FaCartArrowDown/>
                 <figure className="image is-1by1">
                     <img src={img} alt="logo"/>
                 </figure>
@@ -21,7 +32,21 @@ function ProfileCard(props){
                     <p className="subtitle is-4">{arroba}</p>
 
                 </div>
-
+                <div className="columns">
+                    <div className="column is-4">
+                        <button onClick={handleClickSuma} className="button is-primary full-width is-fullwidth">
+                            <p>+</p>
+                        </button>
+                    </div>
+                    <div className="column">
+                        <p className="subtitle">Likes: {count}</p>
+                    </div>
+                    <div className="column">
+                        <button onClick={handleClickResta} className="button is-danger is-fullwidth">
+                            <p>-</p>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     )
