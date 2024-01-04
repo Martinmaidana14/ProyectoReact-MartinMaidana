@@ -1,71 +1,51 @@
+import '../NavBar/NavBar.css';
 import CartWidget from "../CartWidget/CartWidget";
+import { NavLink, Link } from 'react-router-dom';
 
 
 const NavBar = () => {
     return (
-        <nav class="navbar" role="navigation" aria-label="main navigation">
+        <nav className="navbar" role="navigation" aria-label="main navigation">
 
-            <div class="navbar-brand">
+            <div className="navbar-brand">
 
 
-                <a class="navbar-item" href="https://bulma.io">
+                <Link to='/' className="navbar-item" href="https://bulma.io">
 
-                    <img src='./SRMaidana.png' width="180" height="28"/>
-                </a>
+                    <img src='./SRMaidana.png' alt='LogoTienda' width="180" height="28"/>
+                </Link>
 
             </div>
 
-            <div id="navbarBasicExample" class="navbar-menu">
+            <div id="navbarBasicExample" className="navbar-menu">
 
-                <div class="navbar-start">
-                    <ul class="navbar-start">
-                        <li class="navbar-item">
+                <div className="navbar-start Categories">
+                    <ul className="navbar-start">
+                        <li className="navbar-item">
 
-                            <a class="navbar-item nav-link active">
-                                Home
-                            </a>
-                        </li>
-                        <li class="navbar-item">
-                            <a class="navbar-item">
-                                Quienes Somos
-                            </a>
+                            <NavLink to={'/category/celular'} className={({ isActive}) => isActive ? 'ActiveOption' : 'Option'}>Celulares</NavLink>
+
+                            <NavLink to={'/category/tablet'} className={({ isActive}) => isActive ? 'ActiveOption' : 'Option'}>Tablet</NavLink>
+
+                            <NavLink to={'/category/notebook'} className={({ isActive}) => isActive ? 'ActiveOption' : 'Option'}>Notebooks</NavLink>
 
                         </li>
-                        <li class="navbar-item has-dropdown is-hoverable">
-                            <a class="navbar-link">
-                                More
-                            </a>
-                            <div class="navbar-dropdown">
-                                <a class="navbar-item">
-                                    About
-                                </a>
-                                <a class="navbar-item">
-                                    Jobs
-                                </a>
-                                <a class="navbar-item">
-                                    Contact
-                                </a>
-                                <hr class="navbar-divider"/>
-                                <a class="navbar-item">
-                                    Report an issue
-                                </a>
-                            </div>
-                        </li>
+
                     </ul>
                 </div>
 
 
-                <div class="navbar-end">
-                    <div class="navbar-item">
+                <div className="navbar-end">
+                    <div className="navbar-item">
 
-                        <div class="buttons">
-                            <a class="button is-primary">
+                        <div className="buttons">
+                            <a className="button is-primary">
                                 <strong>Sign up</strong>
                             </a>
-                            <a class="button is-light">
+                            <a className="button is-light">
                                 Log in
                             </a>
-                            <a class="button is-light">
+                            <a className="button is-light">
                                 <CartWidget />
                             </a>
                         </div>
@@ -87,11 +67,34 @@ export default NavBar;
     <button>Celulares</button>
     <button>Auriculares</button>
     <button>Notebooks</button>
+
+    <li className="navbar-item has-dropdown is-hoverable">
+        <a className="navbar-link">
+            More
+        </a>
+        <div className="navbar-dropdown">
+            <a className="navbar-item">
+                About
+            </a>
+            <a className="navbar-item">
+                Jobs
+            </a>
+            <a className="navbar-item">
+                Contact
+            </a>
+            <hr className="navbar-divider"/>
+            <a className="navbar-item">
+                Report an issue
+            </a>
+        </div>
+    </li>
+
 </div>
 <CartWidget />
 </nav>
 */
 
+/*
 <div>
 
     <ul class="centerBar">
@@ -114,3 +117,6 @@ export default NavBar;
     </ul>
 
 </div>
+
+
+*/
