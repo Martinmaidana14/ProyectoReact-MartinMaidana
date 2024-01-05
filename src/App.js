@@ -35,17 +35,16 @@ function App(){
 
             <section className="hero is-success">
                 <div className="hero-body">
-                    <h1 className="title">Asistentes</h1>
                     <BrowserRouter>
                         <NavBar />
 
                         <Routes>
 
-                            <Route path="/" element={<ItemListContainer/>}/>
+                            <Route path="/" element={<ItemListContainer />} />
 
-                            <Route path="/category/:categoryId" element={<ItemListContainer/>}/>
+                            <Route path="/category/:categoryId" element={<ItemListContainer />} />
 
-                            <Route path="/item/:itemId" element={<ItemListContainer/>} />
+                            <Route path="/item/:itemId" element={<ItemDetailContainer />} />
 
                             <Route path="*" element={<h1>404 NOT FOUND</h1>} />  
 
@@ -54,30 +53,9 @@ function App(){
                         <footer>Footer</footer>
 
                     </BrowserRouter>
-                    <p className="subtitle">Success subtitle</p>
-                    <ItemListContainer greeting={'Bienvenido/a'}/>
-                    <ItemDetailContainer />
-                    <ItemCount initial={1} stock={10} onAdd={(quantity) => console.log('Cantidad agregada ',quantity)}/>
                 </div>
             </section>
 
-            <div>
-                <SearchBar enSubmit={handleSubmit}/>
-                <ImageList images={img}/>
-            </div>
-            <div className="container">
-                <div className="columns">
-                    <div className="column is-4">
-                        <ProfileCard titulo="Alexa" arroba="@Alexa22" img={AlexaImg} />
-                    </div>
-                    <div className="column is-4">
-                        <ProfileCard titulo="Cortana" arroba="@Cortana66" img={CortanaImg} />
-                    </div>
-                    <div className="column is-4">
-                        <ProfileCard titulo="Siri" arroba="@Siri77" img={SiriImg} />
-                    </div>
-                </div>
-            </div>
         </div>
     );
 }

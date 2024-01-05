@@ -12,7 +12,7 @@ const NavBar = () => {
 
                 <Link to='/' className="navbar-item" href="https://bulma.io">
 
-                    <img src='./SRMaidana.png' alt='LogoTienda' width="180" height="28"/>
+                    <img src='./SRMaidana.png'  width="180" height="28"/>
                 </Link>
 
             </div>
@@ -23,11 +23,11 @@ const NavBar = () => {
                     <ul className="navbar-start">
                         <li className="navbar-item">
 
-                            <NavLink to={'/category/celular'} className={({ isActive}) => isActive ? 'ActiveOption' : 'Option'}>Celulares</NavLink>
+                            <NavLink to={`/category/celular`} className={({ isActive}) => isActive ? 'ActiveOption' : 'Option'}>Celulares</NavLink>
 
-                            <NavLink to={'/category/tablet'} className={({ isActive}) => isActive ? 'ActiveOption' : 'Option'}>Tablet</NavLink>
+                            <NavLink to={`/category/tablet`} className={({ isActive}) => isActive ? 'ActiveOption' : 'Option'}>Tablet</NavLink>
 
-                            <NavLink to={'/category/notebook'} className={({ isActive}) => isActive ? 'ActiveOption' : 'Option'}>Notebooks</NavLink>
+                            <NavLink to={`/category/notebook`} className={({ isActive}) => isActive ? 'ActiveOption' : 'Option'}>Notebooks</NavLink>
 
                         </li>
 
